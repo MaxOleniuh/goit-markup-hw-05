@@ -154,6 +154,9 @@ a {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--main-text-color);
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+  transition-property: color;
 }
 .nav-link:is(:hover, :focus),
 .auth-link:is(:hover, :focus) {
@@ -327,6 +330,7 @@ a {
   fill: var(--light-background);
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
+  transition-property: background-color;
 }
 .social-item:is(:hover, :focus) {
   background-color: var(--pressed-state);
@@ -355,6 +359,7 @@ a {
   width: 168px;
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
+  transition-property: fill, border-color;
 }
 
 .customers-list {
@@ -437,6 +442,7 @@ a {
   fill: var(--light-background);
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
+  transition-property: background-color;
 }
 
 .social-media-footer:is(:focus, :hover) {
@@ -482,6 +488,7 @@ a {
   cursor: pointer;
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
+  transition-property: var(--body-background);
 }
 .order-btn:is(:hover, :focus) {
   background: var(--pressed-state);
@@ -504,21 +511,16 @@ a {
   letter-spacing: 0.04em;
   color: var(--brand-color);
   padding: 12px 24px;
-}
-.btn:hover,
-.btn:focus {
-  background: var(--pressed-state);
-  color: var(--body-background);
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
+  transition-property: border-color, background-color, box-shadow;
 }
-
-.filter-btn:is(:hover, :focus) {
+.btn:is(:hover, :focus) {
+  background: var(--pressed-state);
+  color: var(--body-background);
   border-color: var(--pressed-state);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-  transition-duration: var(--transition-duration);
-  transition-timing-function: var(--transition-timing-function);
 }
 
 /* PROJECT SECTION */
@@ -567,6 +569,7 @@ a {
 .overlay-link {
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
+  transition-property: box-shadow;
 }
 .overlay-wrap {
   position: relative;
@@ -653,4 +656,5 @@ a {
   width: 8px;
   height: 8px;
   fill: var(--dark-theme);
+  transition-property: fill;
 }
