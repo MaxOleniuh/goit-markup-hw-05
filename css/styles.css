@@ -536,7 +536,7 @@ a {
   margin-bottom: 48px;
 }
 
-.project-card:is(:hover, :focus, ) {
+.overlay-link:is(:hover, :focus) {
   box-shadow: 0px 1px 6px rgb(46 47 66 / 8%), 0px 1px 1px rgb(46 47 66 / 16%),
     0px 2px 1px rgb(46 47 66 / 8%);
 }
@@ -565,6 +565,7 @@ a {
   border-top: none;
 }
 .overlay-link {
+  display: block;
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
   transition-property: box-shadow;
@@ -576,10 +577,7 @@ a {
 .overlay-link:is(:hover, :focus) .overlay {
   transform: translate(0, 0);
 }
-.overlay-link {
-  box-shadow: 0px 1px 6px rgb(46 47 66 / 8%), 0px 1px 1px rgb(46 47 66 / 16%),
-    0px 2px 1px rgb(46 47 66 / 8%);
-}
+
 .overlay {
   position: absolute;
   left: 0;
